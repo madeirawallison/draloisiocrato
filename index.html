@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Aloísio Brasil | Site em construção</title>
+  <meta name="description" content="Site oficial do Dr. Aloísio Brasil em construção. Acompanhe as novidades pelo Instagram oficial." />
+  <meta name="theme-color" content="#073B73" />
+
+  <meta property="og:title" content="Dr. Aloísio Brasil | Em breve" />
+  <meta property="og:description" content="Estamos preparando um novo canal oficial de comunicação. Enquanto isso, acompanhe pelo Instagram." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.draloisiocrato.com.br" />
+  <meta property="og:image" content="https://www.draloisiocrato.com.br/assets/banner.jpg" />
+
+  <style>
+    :root {
+      --blue-900: #062B55;
+      --blue-800: #073B73;
+      --blue-700: #0B5FA5;
+      --blue-500: #1787D5;
+      --gold: #F2B84B;
+      --gold-soft: #FFE4A3;
+      --white: #FFFFFF;
+      --text: #17324D;
+      --muted: #65758A;
+      --shadow: 0 28px 80px rgba(2, 21, 43, 0.28);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(23, 135, 213, 0.35), transparent 32%),
+        linear-gradient(135deg, #031A36 0%, #073B73 48%, #0B5FA5 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url('assets/banner.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.12;
+      filter: saturate(1.15) contrast(1.05);
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(3, 26, 54, 0.96), rgba(7, 59, 115, 0.82), rgba(3, 26, 54, 0.56));
+      z-index: -1;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 40px));
+      min-height: 100vh;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 56px;
+      align-items: center;
+      padding: 52px 0;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .badge span {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--gold);
+      box-shadow: 0 0 0 7px rgba(242, 184, 75, 0.18);
+    }
+
+    h1 {
+      margin: 28px 0 18px;
+      font-size: clamp(42px, 6vw, 84px);
+      line-height: 0.94;
+      letter-spacing: -0.055em;
+    }
+
+    .name {
+      display: block;
+      color: var(--gold-soft);
+      text-shadow: 0 10px 30px rgba(0,0,0,0.22);
+    }
+
+    .subtitle {
+      max-width: 640px;
+      margin: 0 0 30px;
+      color: rgba(255,255,255,0.84);
+      font-size: clamp(18px, 2.2vw, 24px);
+      line-height: 1.45;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 34px 0 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .button:hover { transform: translateY(-2px); }
+
+    .primary {
+      color: #09294D;
+      background: linear-gradient(135deg, #FFE4A3, #F2B84B);
+      box-shadow: 0 16px 42px rgba(242, 184, 75, 0.22);
+    }
+
+    .secondary {
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.24);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .contact {
+      display: grid;
+      gap: 8px;
+      color: rgba(255,255,255,0.8);
+      font-size: 15px;
+    }
+
+    .contact a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .visual {
+      position: relative;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-card {
+      position: relative;
+      width: min(440px, 100%);
+      border-radius: 32px;
+      padding: 12px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.34), rgba(255,255,255,0.08));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+      overflow: hidden;
+    }
+
+    .photo-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -70px -110px auto;
+      width: 260px;
+      height: 260px;
+      border-radius: 999px;
+      background: rgba(242,184,75,0.28);
+      filter: blur(10px);
+    }
+
+    .photo-card img {
+      display: block;
+      width: 100%;
+      border-radius: 24px;
+      object-fit: cover;
+      aspect-ratio: 4 / 5;
+      object-position: center top;
+      position: relative;
+      z-index: 1;
+    }
+
+    .floating-box {
+      position: absolute;
+      left: 0;
+      bottom: 58px;
+      max-width: 330px;
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.94);
+      color: var(--text);
+      box-shadow: 0 20px 55px rgba(0,0,0,0.25);
+      z-index: 3;
+    }
+
+    .floating-box strong {
+      display: block;
+      color: var(--blue-800);
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .floating-box p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 14px;
+    }
+
+    .ribbon {
+      position: absolute;
+      right: -38px;
+      top: 72px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 18px solid rgba(242, 184, 75, 0.18);
+      z-index: 0;
+    }
+
+    .footer {
+      position: fixed;
+      right: 24px;
+      bottom: 20px;
+      color: rgba(255,255,255,0.62);
+      font-size: 13px;
+    }
+
+    @media (max-width: 920px) {
+      .page {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 38px 0 70px;
+      }
+
+      .visual { min-height: auto; }
+
+      .photo-card { width: min(360px, 100%); }
+
+      .floating-box {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        margin-top: -26px;
+        width: min(330px, 92%);
+      }
+
+      .footer {
+        position: static;
+        width: min(1180px, calc(100% - 40px));
+        margin: -40px auto 24px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page { width: min(100% - 28px, 1180px); }
+      .actions { flex-direction: column; }
+      .button { width: 100%; }
+      h1 { letter-spacing: -0.045em; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="content" aria-label="Site em construção">
+      <div class="badge"><span></span> Site oficial em construção</div>
+
+      <h1>
+        Em breve,<br />
+        <span class="name">Dr. Aloísio Brasil</span>
+      </h1>
+
+      <p class="subtitle">
+        Estamos preparando um novo canal oficial para reunir trajetória, propostas, agenda e conteúdos da campanha em um só lugar.
+      </p>
+
+      <div class="actions">
+        <a class="button primary" href="https://www.instagram.com/draloisio_crato" target="_blank" rel="noopener noreferrer">Acompanhe no Instagram</a>
+        <a class="button secondary" href="mailto:contato@draloisiocrato.com.br">contato@draloisiocrato.com.br</a>
+      </div>
+
+      <div class="contact">
+        <div>Domínio oficial: <a href="https://www.draloisiocrato.com.br">www.draloisiocrato.com.br</a></div>
+        <div>Instagram: <a href="https://www.instagram.com/draloisio_crato" target="_blank" rel="noopener noreferrer">@draloisio_crato</a></div>
+      </div>
+    </section>
+
+    <section class="visual" aria-label="Dr. Aloísio Brasil">
+      <div class="ribbon" aria-hidden="true"></div>
+      <div class="photo-card">
+        <img src="assets/portrait.jpg" alt="Dr. Aloísio Brasil" />
+      </div>
+      <div class="floating-box">
+        <strong>Saúde, educação e compromisso público.</strong>
+        <p>Uma trajetória construída com trabalho, experiência e dedicação ao Cariri.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="footer">© 2026 Dr. Aloísio Brasil. Todos os direitos reservados.</div>
+</body>
+</html>
