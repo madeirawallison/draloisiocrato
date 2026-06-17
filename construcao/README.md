@@ -1,17 +1,26 @@
-# Site Dr. Aloísio Brasil
+# Site completo - Dr. Aloísio Brasil
 
-Projeto estático pronto para GitHub Pages.
+Versão preparada para rodar em `/construcao/` no GitHub Pages.
 
-## Como usar
+## Como subir
 
-1. Suba todos os arquivos na raiz do repositório.
-2. Mantenha a pasta `assets` no mesmo nível do `index.html`.
-3. Para trocar o WhatsApp, pesquise por `5588999999999` no `index.html` e substitua pelo número final.
-4. Para trocar fotos, substitua os arquivos dentro da pasta `assets` mantendo os mesmos nomes.
+Envie todos estes arquivos para a pasta `construcao` do repositório atual.
 
-## Arquivos
+Estrutura esperada:
 
-- `index.html`
-- `style.css`
-- `script.js`
-- `assets/`
+```
+/construcao/index.html
+/construcao/style.css
+/construcao/script.js
+/construcao/assets/...
+```
+
+URL de aprovação:
+
+```
+https://www.draloisiocrato.com.br/construcao/
+```
+
+O HTML contém `<base href="/construcao/">`, então CSS, JS e imagens serão buscados dentro de `/construcao/`.
+
+WhatsApp provisório: 5588999999999.
