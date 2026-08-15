@@ -1,527 +1,336 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17081065596"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'AW-17081065596');
-  </script>
-
-  <!-- Event snippet for Compra conversion page -->
-  <script>
-    gtag('event', 'conversion', {
-        'send_to': 'AW-17081065596/6S1rCL2P99EaEPzA8dA_',
-        'value': 1.0,
-        'currency': 'BRL',
-        'transaction_id': ''
-    });
-  </script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <base href="/construcao/">
-  <title>Dr. Aloísio Brasil | O Cariri que nós queremos</title>
-  <meta name="description" content="Site oficial do Dr. Aloísio Brasil. Médico, professor, gestor e liderança pública do Cariri." />
-  <meta name="theme-color" content="#062B55" />
-  <meta property="og:title" content="Dr. Aloísio Brasil | O Cariri que nós queremos" />
-  <meta property="og:description" content="Site oficial do Dr. Aloísio Brasil. Médico, professor, gestor e liderança pública do Cariri." />
+  <title>Dr. Aloísio Brasil | Site em construção</title>
+  <meta name="description" content="Site oficial do Dr. Aloísio Brasil em construção. Acompanhe as novidades pelo Instagram oficial." />
+  <meta name="theme-color" content="#073B73" />
+
+  <meta property="og:title" content="Dr. Aloísio Brasil | Em breve" />
+  <meta property="og:description" content="Estamos preparando um novo canal oficial de comunicação. Enquanto isso, acompanhe pelo Instagram." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.draloisiocrato.com.br/construcao/" />
-  <meta property="og:image" content="https://www.draloisiocrato.com.br/construcao/assets/hero-candidatura.jpg" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-
+  <meta property="og:url" content="https://www.draloisiocrato.com.br" />
+  <meta property="og:image" content="https://www.draloisiocrato.com.br/assets/banner.jpg" />
 
   <style>
-    /* Ajuste especial para o card de alianças - imagem ciro2 sem cortes */
-    .support {
-      gap: 42px;
-      align-items: center;
+    :root {
+      --blue-900: #062B55;
+      --blue-800: #073B73;
+      --blue-700: #0B5FA5;
+      --blue-500: #1787D5;
+      --gold: #F2B84B;
+      --gold-soft: #FFE4A3;
+      --white: #FFFFFF;
+      --text: #17324D;
+      --muted: #65758A;
+      --shadow: 0 28px 80px rgba(2, 21, 43, 0.28);
     }
 
-    .support-card {
-      background: linear-gradient(145deg, rgba(6, 43, 85, 0.98), rgba(11, 95, 165, 0.92));
-      border: 1px solid rgba(242, 184, 75, 0.25);
-      border-radius: 30px;
-      padding: 22px;
-      box-shadow: 0 28px 80px rgba(2, 21, 43, 0.28);
-      overflow: hidden;
-      position: relative;
-    }
+    * { box-sizing: border-box; }
 
-    .support-card::before {
-      content: "";
-      position: absolute;
-      inset: -120px -120px auto auto;
-      width: 280px;
-      height: 280px;
-      border-radius: 999px;
-      background: rgba(242, 184, 75, 0.18);
-      filter: blur(8px);
-      pointer-events: none;
-    }
-
-    .support-card-image {
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 24px;
-      padding: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
-      z-index: 1;
-    }
-
-    .support-card-image img {
-      width: 100%;
-      max-width: 560px;
-      height: auto;
-      display: block;
-      object-fit: contain;
-      object-position: center;
-      border-radius: 18px;
-    }
-
-    .support-card-content {
-      position: relative;
-      z-index: 1;
-      padding: 22px 8px 4px;
-      color: #ffffff;
-    }
-
-    .support-card-content span {
-      display: inline-flex;
-      margin-bottom: 10px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(242, 184, 75, 0.16);
-      color: #FFE4A3;
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    .support-card-content h3 {
-      margin: 0 0 10px;
-      font-size: clamp(24px, 3vw, 34px);
-      line-height: 1.05;
-    }
-
-    .support-card-content p {
-      margin: 0 0 16px;
-      color: rgba(255, 255, 255, 0.82);
-      line-height: 1.55;
-    }
-
-    .support-card-content blockquote {
+    body {
       margin: 0;
-      padding-left: 16px;
-      border-left: 4px solid #F2B84B;
-      color: #FFE4A3;
-      font-weight: 800;
-      line-height: 1.45;
-    }
-
-    @media (max-width: 720px) {
-      .support-card {
-        padding: 14px;
-        border-radius: 24px;
-      }
-
-      .support-card-image {
-        padding: 8px;
-      }
-
-      .support-card-content {
-        padding: 18px 4px 4px;
-      }
-    }
-  </style>
-
-
-  <style>
-    /* Nova primeira dobra — candidatura oficial */
-    .campaign-launch {
-      position: relative;
-      min-height: 760px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.02fr) minmax(380px, 0.78fr);
-      align-items: center;
-      gap: clamp(36px, 6vw, 88px);
-      padding: 150px max(6vw, 28px) 80px;
-      overflow: hidden;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--white);
       background:
-        radial-gradient(circle at 78% 24%, rgba(242, 184, 75, 0.22), transparent 32%),
-        radial-gradient(circle at 12% 76%, rgba(27, 106, 174, 0.35), transparent 34%),
-        linear-gradient(135deg, #031d3c 0%, #062b55 54%, #0b4f8a 100%);
-      color: #ffffff;
+        radial-gradient(circle at 15% 20%, rgba(23, 135, 213, 0.35), transparent 32%),
+        linear-gradient(135deg, #031A36 0%, #073B73 48%, #0B5FA5 100%);
+      overflow-x: hidden;
     }
 
-    .campaign-launch::before {
+    body::before {
       content: "";
-      position: absolute;
+      position: fixed;
       inset: 0;
-      background:
-        linear-gradient(120deg, transparent 0 58%, rgba(255,255,255,0.055) 58% 59%, transparent 59%),
-        repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 82px);
-      pointer-events: none;
+      background-image: url('assets/banner.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.12;
+      filter: saturate(1.15) contrast(1.05);
+      z-index: -2;
     }
 
-    .campaign-launch::after {
+    body::after {
       content: "";
-      position: absolute;
-      left: -6%;
-      right: -6%;
-      bottom: -92px;
-      height: 170px;
-      background: #ffffff;
-      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(3, 26, 54, 0.96), rgba(7, 59, 115, 0.82), rgba(3, 26, 54, 0.56));
+      z-index: -1;
     }
 
-    .campaign-launch-copy,
-    .campaign-launch-visual {
-      position: relative;
-      z-index: 2;
+    .page {
+      width: min(1180px, calc(100% - 40px));
+      min-height: 100vh;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 56px;
+      align-items: center;
+      padding: 52px 0;
     }
 
-    .candidate-badge {
+    .badge {
       display: inline-flex;
       align-items: center;
       gap: 10px;
       padding: 10px 16px;
-      margin-bottom: 24px;
-      border: 1px solid rgba(242, 184, 75, 0.52);
+      border: 1px solid rgba(255, 255, 255, 0.22);
       border-radius: 999px;
-      background: rgba(242, 184, 75, 0.12);
-      color: #ffe29a;
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 0.08em;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      font-size: 14px;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
+      font-weight: 700;
     }
 
-    .candidate-badge::before {
-      content: "";
+    .badge span {
       width: 9px;
       height: 9px;
       border-radius: 999px;
-      background: #f2b84b;
-      box-shadow: 0 0 0 7px rgba(242, 184, 75, 0.14);
+      background: var(--gold);
+      box-shadow: 0 0 0 7px rgba(242, 184, 75, 0.18);
     }
 
-    .campaign-launch h1 {
-      max-width: 760px;
-      margin: 0 0 18px;
-      font-size: clamp(50px, 6.8vw, 96px);
+    h1 {
+      margin: 28px 0 18px;
+      font-size: clamp(42px, 6vw, 84px);
       line-height: 0.94;
       letter-spacing: -0.055em;
-      color: #ffffff;
     }
 
-    .campaign-launch h1 span {
+    .name {
       display: block;
-      color: #f2b84b;
+      color: var(--gold-soft);
+      text-shadow: 0 10px 30px rgba(0,0,0,0.22);
     }
 
-    .campaign-slogan {
-      max-width: 680px;
-      margin: 0 0 25px;
-      color: #ffffff;
-      font-size: clamp(23px, 2.5vw, 36px);
-      line-height: 1.14;
-      font-weight: 800;
+    .subtitle {
+      max-width: 640px;
+      margin: 0 0 30px;
+      color: rgba(255,255,255,0.84);
+      font-size: clamp(18px, 2.2vw, 24px);
+      line-height: 1.45;
     }
 
-    .campaign-text {
-      max-width: 710px;
-      margin: 0 0 32px;
-      color: rgba(255,255,255,0.82);
-      font-size: 18px;
-      line-height: 1.75;
-    }
-
-    .campaign-actions {
+    .actions {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
+      margin: 34px 0 30px;
     }
 
-    .campaign-actions .btn-secondary {
-      color: #ffffff;
-      border-color: rgba(255,255,255,0.32);
-      background: rgba(255,255,255,0.08);
-    }
-
-    .campaign-actions .btn-secondary:hover {
-      background: rgba(255,255,255,0.16);
-    }
-
-    .campaign-launch-visual {
-      display: flex;
-      justify-content: center;
+    .button {
+      display: inline-flex;
       align-items: center;
-    }
-
-    .campaign-poster-frame {
-      width: min(100%, 560px);
-      padding: 12px;
-      border-radius: 34px;
-      background: linear-gradient(145deg, rgba(255,255,255,0.20), rgba(242,184,75,0.22));
-      border: 1px solid rgba(255,255,255,0.22);
-      box-shadow: 0 35px 95px rgba(0,0,0,0.34);
-      transform: rotate(1.2deg);
-    }
-
-    .campaign-poster-frame img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 25px;
-      object-fit: contain;
-      object-position: center;
-    }
-
-    .campaign-seal {
-      position: absolute;
-      left: -24px;
-      bottom: 42px;
-      max-width: 240px;
-      padding: 16px 18px;
-      border-radius: 18px;
-      background: #ffffff;
-      color: #062b55;
-      box-shadow: 0 18px 52px rgba(0,0,0,0.25);
-      font-size: 14px;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 14px;
+      text-decoration: none;
       font-weight: 800;
-      line-height: 1.35;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     }
 
-    .campaign-seal strong {
+    .button:hover { transform: translateY(-2px); }
+
+    .primary {
+      color: #09294D;
+      background: linear-gradient(135deg, #FFE4A3, #F2B84B);
+      box-shadow: 0 16px 42px rgba(242, 184, 75, 0.22);
+    }
+
+    .secondary {
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.24);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .contact {
+      display: grid;
+      gap: 8px;
+      color: rgba(255,255,255,0.8);
+      font-size: 15px;
+    }
+
+    .contact a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .visual {
+      position: relative;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-card {
+      position: relative;
+      width: min(440px, 100%);
+      border-radius: 32px;
+      padding: 12px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.34), rgba(255,255,255,0.08));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+      overflow: hidden;
+    }
+
+    .photo-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -70px -110px auto;
+      width: 260px;
+      height: 260px;
+      border-radius: 999px;
+      background: rgba(242,184,75,0.28);
+      filter: blur(10px);
+    }
+
+    .photo-card img {
       display: block;
-      margin-top: 4px;
-      color: #d99b19;
-      font-size: 17px;
+      width: 100%;
+      border-radius: 24px;
+      object-fit: cover;
+      aspect-ratio: 4 / 5;
+      object-position: center top;
+      position: relative;
+      z-index: 1;
     }
 
-    @media (max-width: 980px) {
-      .campaign-launch {
+    .floating-box {
+      position: absolute;
+      left: 0;
+      bottom: 58px;
+      max-width: 330px;
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.94);
+      color: var(--text);
+      box-shadow: 0 20px 55px rgba(0,0,0,0.25);
+      z-index: 3;
+    }
+
+    .floating-box strong {
+      display: block;
+      color: var(--blue-800);
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .floating-box p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 14px;
+    }
+
+    .ribbon {
+      position: absolute;
+      right: -38px;
+      top: 72px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 18px solid rgba(242, 184, 75, 0.18);
+      z-index: 0;
+    }
+
+    .footer {
+      position: fixed;
+      right: 24px;
+      bottom: 20px;
+      color: rgba(255,255,255,0.62);
+      font-size: 13px;
+    }
+
+    @media (max-width: 920px) {
+      .page {
         grid-template-columns: 1fr;
-        padding-top: 132px;
-        text-align: center;
+        gap: 30px;
+        padding: 38px 0 70px;
       }
 
-      .campaign-launch-copy {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      .visual { min-height: auto; }
+
+      .photo-card { width: min(360px, 100%); }
+
+      .floating-box {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        margin-top: -26px;
+        width: min(330px, 92%);
       }
 
-      .campaign-actions {
-        justify-content: center;
-      }
-
-      .campaign-launch-visual {
-        margin-top: 6px;
+      .footer {
+        position: static;
+        width: min(1180px, calc(100% - 40px));
+        margin: -40px auto 24px;
       }
     }
 
-    @media (max-width: 620px) {
-      .campaign-launch {
-        min-height: auto;
-        padding: 116px 20px 105px;
-      }
-
-      .campaign-launch h1 {
-        font-size: clamp(45px, 15vw, 66px);
-      }
-
-      .campaign-text {
-        font-size: 16px;
-        line-height: 1.65;
-      }
-
-      .campaign-poster-frame {
-        padding: 8px;
-        border-radius: 25px;
-        transform: none;
-      }
-
-      .campaign-poster-frame img {
-        border-radius: 19px;
-      }
-
-      .campaign-seal {
-        position: static;
-        max-width: none;
-        margin-top: 12px;
-        text-align: left;
-      }
+    @media (max-width: 520px) {
+      .page { width: min(100% - 28px, 1180px); }
+      .actions { flex-direction: column; }
+      .button { width: 100%; }
+      h1 { letter-spacing: -0.045em; }
     }
   </style>
-
 </head>
 <body>
-  <header class="site-header" id="topo">
-    <a href="/construcao/#inicio" class="brand" aria-label="Dr. Aloísio Brasil">
-      <span class="brand-mark">AB</span>
-      <span class="brand-text">Dr. Aloísio <strong>Brasil</strong></span>
-    </a>
-    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-    <nav class="nav-menu" aria-label="Menu principal">
-      <a href="/construcao/#quem-sou">Quem Sou</a>
-      <a href="projetos/">Projetos</a>
-      <a href="/construcao/#trabalho">Trabalho</a>
-      <a href="depoimentos/">O que dizem</a>
-      <a href="gente/">Gente da Gente</a>
-      <a href="familia/">Família</a>
-      <a href="/construcao/#eventos">Eventos</a>
-      <a href="/construcao/#redes">Redes Sociais</a>
-      <!-- WhatsApp temporariamente removido até definição da equipe de atendimento -->
-    </nav>
-  </header>
-  <main>
+  <main class="page">
+    <section class="content" aria-label="Site em construção">
+      <div class="badge"><span></span> Site oficial em construção</div>
 
-    <section class="campaign-launch" id="inicio">
-      <div class="campaign-launch-copy reveal">
-        <span class="candidate-badge">Candidato a Deputado Federal</span>
+      <h1>
+        Em breve,<br />
+        <span class="name">Dr. Aloísio Brasil</span>
+      </h1>
 
-        <h1>Dr. Aloísio <span>Brasil</span></h1>
+      <p class="subtitle">
+        Estamos preparando um novo canal oficial para reunir trajetória, propostas, agenda e conteúdos da campanha em um só lugar.
+      </p>
 
-        <p class="campaign-slogan">Do Cariri para todo o Ceará.</p>
-
-        <p class="campaign-text">
-          Carrego comigo o orgulho de ser cearense e a força de um povo que nunca desiste.
-          É com coragem, compromisso e vontade de fazer mais que sigo nessa caminhada como
-          candidato a Deputado Federal. Quero ser uma voz firme pelo Cariri e por todo o Ceará,
-          defendendo quem trabalha, quem sonha e quem acredita que podemos construir um futuro melhor.
-        </p>
-
-        <div class="campaign-actions">
-          <a class="btn btn-primary" href="#quem-sou">Conheça minha trajetória</a>
-          <a class="btn btn-secondary" href="projetos/">Conheça nossos projetos</a>
-        </div>
+      <div class="actions">
+        <a class="button primary" href="https://www.instagram.com/draloisio_crato" target="_blank" rel="noopener noreferrer">Acompanhe no Instagram</a>
+        <a class="button secondary" href="mailto:contato@draloisiocrato.com.br">contato@draloisiocrato.com.br</a>
       </div>
 
-      <div class="campaign-launch-visual reveal">
-        <div class="campaign-poster-frame">
-          <img
-            src="assets/hero-candidatura.jpg?v=20260727"
-            alt="Dr. Aloísio Brasil, candidato a Deputado Federal"
-          />
-        </div>
-
-        <div class="campaign-seal">
-          Coragem, compromisso e vontade de fazer mais.
-          <strong>Do Cariri para todo o Ceará.</strong>
-        </div>
+      <div class="contact">
+        <div>Domínio oficial: <a href="https://www.draloisiocrato.com.br">www.draloisiocrato.com.br</a></div>
+        <div>Instagram: <a href="https://www.instagram.com/draloisio_crato" target="_blank" rel="noopener noreferrer">@draloisio_crato</a></div>
       </div>
     </section>
 
-    <section class="hero" id="visao">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-content reveal">
-        <p class="eyebrow">O Cariri que nós queremos</p>
-        <h1>O futuro do Cariri começa com trabalho, inovação e compromisso com as pessoas.</h1>
-        <p class="hero-subtitle">Dr. Aloísio Brasil une experiência na saúde, na educação, na gestão pública e na vida real de quem conhece de perto os desafios do nosso povo.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#quem-sou">Conheça a trajetória</a>
-          <a class="btn btn-secondary" href="depoimentos/">O que dizem sobre Aloísio</a>
-        </div>
-        <div class="hero-stats" aria-label="Pilares de atuação">
-          <div><strong>Saúde</strong><span>experiência e cuidado</span></div>
-          <div><strong>Educação</strong><span>formação e futuro</span></div>
-          <div><strong>Inovação</strong><span>emprego e desenvolvimento</span></div>
-        </div>
+    <section class="visual" aria-label="Dr. Aloísio Brasil">
+      <div class="ribbon" aria-hidden="true"></div>
+      <div class="photo-card">
+        <img src="assets/portrait.jpg" alt="Dr. Aloísio Brasil" />
       </div>
-      <div class="hero-photo reveal">
-        <img src="assets/hero.jpg" alt="Dr. Aloísio Brasil" />
-        <div class="photo-seal">Médico, professor, gestor e homem público</div>
+      <div class="floating-box">
+        <strong>Saúde, educação e compromisso público.</strong>
+        <p>Uma trajetória construída com trabalho, experiência e dedicação ao Cariri.</p>
       </div>
     </section>
-
-    <section class="section about" id="quem-sou">
-      <div class="section-heading reveal">
-        <p class="eyebrow dark">Quem é Aloísio</p>
-        <h2>Uma trajetória construída com estudo, trabalho e serviço ao Cariri.</h2>
-        <p>Filho do Cariri, médico, professor, gestor e liderança pública. Dr. Aloísio Brasil carrega uma história marcada pela dedicação à saúde, pela formação de profissionais, pela gestão e pelo contato direto com a população.</p>
-      </div>
-      <div class="about-grid">
-        <article class="about-card reveal"><span>01</span><h3>Médico</h3><p>Atuação consolidada na saúde pública e privada, com olhar técnico e humano para os desafios reais da população.</p></article>
-        <article class="about-card reveal"><span>02</span><h3>Professor</h3><p>Experiência acadêmica na formação de novos profissionais e contribuição para o fortalecimento da medicina no Cariri.</p></article>
-        <article class="about-card reveal"><span>03</span><h3>Gestor</h3><p>Vivência em administração em saúde, auditoria, planejamento e melhoria dos serviços públicos.</p></article>
-        <article class="about-card reveal"><span>04</span><h3>Homem público</h3><p>Uma caminhada política pautada por presença, diálogo e compromisso com a região.</p></article>
-      </div>
-    </section>
-
-    <section class="section testimonial-strip" id="depoimentos-preview">
-      <div class="testimonial-preview">
-        <div class="testimonial-photo reveal"><img src="assets/portrait-polo.jpg" alt="Dr. Aloísio Brasil" /></div>
-        <div class="quote-stack reveal">
-          <p class="eyebrow dark">O que dizem sobre Aloísio</p>
-          <h2>Confiança construída na vida real.</h2>
-          <div class="quote-card"><p>“Aloísio é uma pessoa do bem: carinhoso, humanitário, muito estudioso, determinado, perseverante e brincalhão.”</p><strong>Mãe</strong></div>
-          <div class="quote-card"><p>“Foi o único que pegou na minha mão quando todos soltaram.”</p><strong>Solange Monteiro</strong></div>
-          <a class="btn btn-primary" href="depoimentos/">Ver depoimentos</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section vision" id="campanha">
-      <div class="vision-card reveal"><h2>O Cariri que queremos se constrói com coragem, preparo e presença.</h2><p>Desenvolver o Cariri é aproximar tecnologia, saúde, educação, emprego e oportunidades. É olhar para cada cidade, cada bairro e cada família com responsabilidade e vontade de realizar.</p></div>
-      <div class="pillars reveal"><div><strong>Saúde que funciona</strong><span>serviço público mais eficiente e próximo.</span></div><div><strong>Educação que prepara</strong><span>formação para o presente e para o futuro.</span></div><div><strong>Desenvolvimento</strong><span>emprego, renda e novas oportunidades.</span></div><div><strong>Tecnologia</strong><span>inovação a serviço da população.</span></div></div>
-    </section>
-
-    <section class="section project" id="projetos">
-      <div class="project-copy reveal"><p class="eyebrow dark">Projeto em destaque</p><h2>Parque Tecnológico do Cariri</h2><p>Uma política pública estratégica para reunir universidades, empresas, startups, centros de pesquisa, governo e investidores com o objetivo de transformar conhecimento em riqueza, gerar empregos qualificados e criar soluções para problemas reais da população.</p><ul class="check-list"><li>Estimular inovação e empreendedorismo.</li><li>Aproximar universidade, setor produtivo e governo.</li><li>Atrair investimentos e empresas inovadoras.</li><li>Gerar empregos qualificados para a região.</li><li>Modernizar a gestão pública com tecnologia.</li></ul><div class="back-line"><a class="btn btn-primary" href="projetos/">Conheça os projetos</a></div></div>
-      <div class="project-panel reveal"><h3>Áreas de atuação</h3><div class="tags"><span>Saúde digital</span><span>Inteligência artificial</span><span>Biotecnologia</span><span>Energias renováveis</span><span>Cidades inteligentes</span><span>GovTech</span><span>Educação tecnológica</span><span>Agronegócio inovador</span><span>Indústria 4.0</span></div><a class="inline-link" href="https://www.instagram.com/reel/DZIby20hRgo/" target="_blank" rel="noopener">Ver conteúdo sobre o projeto</a></div>
-    </section>
-
-    <section class="section work" id="trabalho"><div class="section-heading reveal"><p class="eyebrow dark">Trabalho e presença pública</p><h2>Experiência para representar, dialogar e construir soluções.</h2></div><div class="work-grid"><img class="reveal" src="assets/assembleia-wide.jpg" alt="Dr. Aloísio em ambiente parlamentar" /><div class="work-text reveal"><h3>Atuação com responsabilidade</h3><p>Na vida pública, Dr. Aloísio defende uma política conectada com a realidade das pessoas: ouvindo, estudando, propondo e buscando caminhos concretos para o desenvolvimento regional.</p><div class="mini-cards"><span>Saúde pública</span><span>Gestão</span><span>Educação</span><span>Desenvolvimento</span></div></div><img class="reveal" src="assets/radio-aluisio.jpg?v=20260709" alt="Dr. Aloísio em entrevista na rádio" /></div></section>
-
-    <section class="section people" id="gente"><div class="section-heading light reveal"><p class="eyebrow">Gente da Gente</p><h2>Política começa ouvindo as pessoas.</h2><p>Nenhuma transformação nasce distante da realidade. Ela começa nas ruas, nas casas, nas conversas e no respeito por quem vive o Cariri todos os dias.</p><div class="back-line"><a class="btn btn-primary" href="gente/">Ver mais registros</a></div></div><div class="gallery people-gallery"><img class="reveal tall" src="assets/gente-crianca.jpg" alt="Dr. Aloísio com criança em visita comunitária" /><img class="reveal" src="assets/gente-grupo2.jpg" style="object-position:center center;" alt="Dr. Aloísio com moradores" /><img class="reveal" src="assets/gente-dupla.jpg" alt="Dr. Aloísio com moradora" /><img class="reveal wide" src="assets/gente-selfie2.jpg" style="object-position:center center;" alt="Dr. Aloísio em encontro com populares" /></div></section>
-
-    <section class="section family" id="familia"><div class="family-image reveal"><img src="assets/familia.jpg" alt="Dr. Aloísio em momento familiar" /></div><div class="family-copy reveal"><p class="eyebrow dark">Família e valores</p><h2>As raízes que sustentam uma caminhada.</h2><p>A vida pública também é feita de valores. Família, respeito, responsabilidade e compromisso com as pessoas são parte da história que orienta a caminhada de Dr. Aloísio.</p><blockquote>“A esperança é a ponte entre os desafios de hoje e as conquistas de amanhã.”</blockquote><div class="back-line"><a class="btn btn-primary" href="familia/">Conheça este lado da história</a></div></div></section>
-
-    <section class="section support" id="eventos">
-      <div class="support-copy reveal">
-        <p class="eyebrow dark">Eventos, encontros e alianças</p>
-        <h2>Diálogo com lideranças e presença nos espaços onde o futuro é decidido.</h2>
-        <p>A construção de uma região mais forte passa pelo diálogo com a população, com lideranças locais e com quem acredita no potencial do Cariri.</p>
-        <p>Com trabalho, preparo e união, o Cariri pode avançar em desenvolvimento, inovação e oportunidades para as pessoas.</p>
-      </div>
-
-      <div class="support-card reveal">
-        <div class="support-card-image">
-          <img src="assets/ciro2.jpg" alt="Dr. Aloísio, Ciro Gomes e Felipe Vasques">
-        </div>
-        <div class="support-card-content">
-          <span>Alianças pelo Cariri</span>
-          <h3>Aloísio, Ciro Gomes e Felipe Vasques</h3>
-          <p>Uma agenda construída com diálogo, esperança e compromisso com um futuro de mais desenvolvimento para o Ceará.</p>
-          <blockquote>“A esperança é a ponte entre os desafios de hoje e as conquistas de amanhã.”</blockquote>
-        </div>
-      </div>
-    </section>
-
-    <section class="section social" id="redes"><div class="social-card reveal"><h2>Acompanhe Dr. Aloísio nas redes sociais</h2><p>Conteúdos, agenda, bastidores, projetos e conversas sobre o futuro do Cariri.</p><div class="social-actions"><a class="btn btn-primary" href="https://www.instagram.com/draloisio_crato" target="_blank" rel="noopener">Instagram @draloisio_crato</a></div></div></section>
-
-    <section class="section contact-section" id="contato"><div class="contact-box reveal"><p class="eyebrow dark">Canais oficiais</p><h2>Acompanhe o Dr. Aloísio nas redes sociais</h2><p>Neste momento, nossa equipe está estruturando os canais de atendimento direto. Enquanto isso, acompanhe as novidades, agendas, projetos e ações pelo Instagram oficial.</p><div class="contact-links"><a href="https://www.instagram.com/draloisio_crato" target="_blank" rel="noopener">@draloisio_crato</a></div></div></section>
   </main>
-  <footer>
-    <p>© 2026 Dr. Aloísio Brasil. Todos os direitos reservados.</p>
-    <p class="credits">Layout e desenvolvimento por <a href="https://www.instagram.com/twestrategiadigital" target="_blank" rel="noopener noreferrer">@twestrategiadigital</a></p>
+
+  <div class="footer">© 2026 Dr. Aloísio Brasil. Todos os direitos reservados.</div>
+
+   <p class="credits">
+          Layout e desenvolvimento por
+          <a href="https://www.instagram.com/twestrategiadigital" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   style="color: #C9A84C;">
+    @twestrategiadigital
+</a>
+      </p>
   </footer>
-  <!-- Botão flutuante do WhatsApp temporariamente removido até ativação da equipe -->
-  <script src="script.js"></script>
+
 </body>
 </html>
